@@ -1,0 +1,137 @@
+<html>
+<head>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        .small-font {
+            font-size: 10px;
+        }
+
+        .small-font > * {
+            font-size: 10px;
+        }
+
+        .payment-details tr td:first-of-type {
+            padding-right: 30px;
+        }
+    </style>
+</head>
+<body style="max-width: 1280px; margin: 0 auto; padding: 50px">
+<header style="display: flex; justify-content: space-between">
+    <img src="[[ logo_url ]]" alt="logo" style="max-height: 150px; max-width: 150px"/>
+    <h1 style="font-size: 24px">Invoice Nr. [[ invoice_num ]]</h1>
+</header>
+<div style="display: flex; justify-content: space-between; margin: 20px">
+    <div>
+        <table style="width: 100%; margin-bottom: 30px" cellspacing="0" class="payment-details">
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:80%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th style="border-bottom: 1px solid #ccc; text-align: left">Order details</th>
+                <th style="border-bottom: 1px solid #ccc"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="white-space: nowrap;">Company Name:</td>
+                <td style="font-weight: bold">[[ company_name ]]</td>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap;">Reg. nr.:</td>
+                <td style="font-weight: bold">[[ reg_number ]]</td>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap;">Address:</td>
+                <td style="font-weight: bold">[[ company_address ]]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table style="width: 100%; margin-bottom: 30px" cellspacing="0" class="payment-details">
+            <colgroup>
+                <col style="width:40%">
+                <col style="width:60%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th style="border-bottom: 1px solid #ccc; text-align: left">Receiver</th>
+                <th style="border-bottom: 1px solid #ccc"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="white-space: nowrap;">Full Name:</td>
+                <td style="font-weight: bold">[[ full_name ]]</td>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap;">Phone number:</td>
+                <td style="font-weight: bold">[[ phone ]]</td>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap;">Email:</td>
+                <td style="font-weight: bold">[[ email ]]</td>
+            </tr>
+            </tbody>
+        </table>
+        <table style="width: 100%" cellspacing="0">
+            <colgroup>
+                <col style="width:40%">
+                <col style="width:60%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th style="border-bottom: 1px solid #ccc; text-align: left">Order details</th>
+                <th style="border-bottom: 1px solid #ccc"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Created:</td>
+                <td>[[ creation_date ]]</td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid #ccc">Confirmed:</td>
+                <td style="border-bottom: 1px solid #ccc">[[ confirmation_date ]]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<table cellspacing="0" style="width: 100%; margin-bottom: 30px">
+    <colgroup>
+        <col style="width:10%">
+        <col style="width:8%">
+        <col style="width:11%">
+        <col style="width:11%">
+        <col style="width:11%">
+    </colgroup>
+    <thead>
+    <td style="border-bottom: 1px solid #ccc">Nr.</td>
+    <td style="border-bottom: 1px solid #ccc; text-align: center">Item</td>
+    <td style="border-bottom: 1px solid #ccc; text-align: right">Subtotal EUR</td>
+    <td style="border-bottom: 1px solid #ccc; text-align: right">Qty</td>
+    <td style="border-bottom: 1px solid #ccc; text-align: right">Total EUR</td>
+    </thead>
+    <tbody>
+    [[ items ]]
+    </tbody>
+</table>
+<div style="width: 50%; margin-left: auto; margin-bottom: 15px">
+    <table cellspacing="0" style="width: 100%">
+        <tr>
+            <td style="text-align: right; font-weight: bold; border-top: 1px solid #000">Total sum</td>
+            <td style="text-align: right; font-weight: bold; border-top: 1px solid #000">[[ grand_total ]]</td>
+        </tr>
+    </table>
+</div>
+<p style="margin: 45px 0">
+    <b><u>Important:</u></b> This is an electronically generated bill valid without physical signature.
+</p>
+</body>
+</html>

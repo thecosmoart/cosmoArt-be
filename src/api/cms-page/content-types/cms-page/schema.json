@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cms_pages",
+  "info": {
+    "singularName": "cms-page",
+    "pluralName": "cms-pages",
+    "displayName": "CMS Page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "minLength": 3
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

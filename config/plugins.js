@@ -1,5 +1,1 @@
-module.exports = () => ({
-    'random-sort': {
-        enabled: true,
-    }
-});
+module.exports = () => ({});

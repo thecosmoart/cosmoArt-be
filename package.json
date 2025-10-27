@@ -21,12 +21,10 @@
     "@strapi/strapi": "5.11.0",
     "dayjs": "^1.11.13",
     "mysql2": "3.9.8",
-    "openid": "^2.0.13",
     "openpayze": "file:libs/openpayze-1.0.tgz",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "strapi-plugin-random-sort": "^0.0.3",
     "styled-components": "^6.0.0",
     "wkhtmltopdf": "^0.4.0"
   },

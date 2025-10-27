@@ -1,6 +1,5 @@
 'use strict';
 
-const openid = require("openid");
 const utils = require("@strapi/utils");
 const { ApplicationError } = utils.errors;
 

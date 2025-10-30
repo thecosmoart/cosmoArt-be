@@ -30,17 +30,16 @@
         "files"
       ]
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "products"
-    },
     "sort_order": {
       "type": "integer",
       "required": false,
       "unique": false,
       "default": 10000
+    },
+    "amount": {
+      "type": "biginteger",
+      "default": "0",
+      "min": "0"
     }
   }
 }

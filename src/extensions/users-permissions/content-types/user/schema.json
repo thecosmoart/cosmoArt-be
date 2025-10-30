@@ -91,6 +91,11 @@
     "steamAvatar": {
       "type": "string",
       "unique": true
+    },
+    "balance": {
+      "type": "biginteger",
+      "min": "0",
+      "default": "0"
     }
   }
 }

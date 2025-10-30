@@ -21,6 +21,7 @@
     "@strapi/strapi": "5.11.0",
     "dayjs": "^1.11.13",
     "mysql2": "3.9.8",
+    "openai": "^6.7.0",
     "openpayze": "file:libs/openpayze-1.0.tgz",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

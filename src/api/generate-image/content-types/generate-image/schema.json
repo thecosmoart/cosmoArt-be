@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "generate_images",
+  "info": {
+    "singularName": "generate-image",
+    "pluralName": "generate-images",
+    "displayName": "Generate image"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "prompt": {
+      "type": "blocks"
+    }
+  }
+}

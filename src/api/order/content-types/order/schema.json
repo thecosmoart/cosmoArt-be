@@ -37,8 +37,7 @@
         "COMPLETED",
         "REJECTED"
       ],
-      "default": "CREATED",
-      "private": true
+      "default": "CREATED"
     }
   }
 }

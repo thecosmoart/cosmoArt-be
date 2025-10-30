@@ -529,7 +529,6 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     order_status: Schema.Attribute.Enumeration<
       ['CREATED', 'PROCESSING', 'COMPLETED', 'REJECTED']
     > &
-      Schema.Attribute.Private &
       Schema.Attribute.DefaultTo<'CREATED'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

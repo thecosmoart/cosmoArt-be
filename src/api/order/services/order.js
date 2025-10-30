@@ -99,7 +99,7 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
             await strapi.documents('api::order.order').update({
                 documentId: order.documentId,
                 data: {
-                    order_status: 'PROCESSING',
+                    order_status: 'COMPLETED',
                 }
             });
 

@@ -76,22 +76,6 @@
       "relation": "oneToOne",
       "target": "api::address.address"
     },
-    "steamId": {
-      "type": "string",
-      "unique": true
-    },
-    "steamName": {
-      "type": "string",
-      "unique": true
-    },
-    "tradeUrl": {
-      "type": "string",
-      "unique": true
-    },
-    "steamAvatar": {
-      "type": "string",
-      "unique": true
-    },
     "balance": {
       "type": "biginteger",
       "min": "0",

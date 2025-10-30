@@ -1085,10 +1085,6 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    steamAvatar: Schema.Attribute.String & Schema.Attribute.Unique;
-    steamId: Schema.Attribute.String & Schema.Attribute.Unique;
-    steamName: Schema.Attribute.String & Schema.Attribute.Unique;
-    tradeUrl: Schema.Attribute.String & Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

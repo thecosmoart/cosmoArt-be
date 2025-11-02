@@ -34,7 +34,8 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
             const items = await strapi.documents('api::order-item.order-item').create({
                 data: {
                     name: product.name,
-                    price: product.price
+                    price: product.price,
+                    amount: product.amount
                 }
             });
 
@@ -85,21 +86,31 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
         const orderCallback = new Callback(process.env.PROJECT_SECRET, requestBody);
 
         if (orderCallback.isPaymentSuccess()) {
+            console.log('***', 12);
             const order = await strapi.db.query('api::order.order').findOne({
                 where: {
-                    documentId: requestBody.payment.id,
+                    documentId: 'hJPwolpDY1',
                 },
-                populate: ['user'],
+                populate: ['user', 'items'],
             });
 
             if (!order) {
                 return;
             }
 
+            const user = order.user;
+
             await strapi.documents('api::order.order').update({
                 documentId: order.documentId,
                 data: {
                     order_status: 'COMPLETED',
+                }
+            });
+
+            await strapi.documents('plugin::users-permissions.user').update({
+                documentId: user.documentId,
+                data: {
+                    balance: Number(user.balance) + Number(order.items[0].amount),
                 }
             });
 

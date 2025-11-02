@@ -478,6 +478,7 @@ export interface ApiGenerateImageGenerateImage
 export interface ApiOrderItemOrderItem extends Struct.CollectionTypeSchema {
   collectionName: 'order_items';
   info: {
+    description: '';
     displayName: 'Order item';
     pluralName: 'order-items';
     singularName: 'order-item';
@@ -486,6 +487,14 @@ export interface ApiOrderItemOrderItem extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    amount: Schema.Attribute.BigInteger &
+      Schema.Attribute.SetMinMax<
+        {
+          min: '0';
+        },
+        string
+      > &
+      Schema.Attribute.DefaultTo<'0'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -97,7 +97,7 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
             if (!order) {
                 return;
             }
-
+console.log('***', order);
             const user = order.user;
 
             await strapi.documents('api::order.order').update({
@@ -106,7 +106,7 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
                     order_status: 'COMPLETED',
                 }
             });
-
+console.log('***', Number(user.balance) + Number(order.items[0].amount));
             await strapi.documents('plugin::users-permissions.user').update({
                 documentId: user.documentId,
                 data: {

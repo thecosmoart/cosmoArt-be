@@ -89,7 +89,7 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
             console.log('***', 12);
             const order = await strapi.db.query('api::order.order').findOne({
                 where: {
-                    documentId: 'hJPwolpDY1',
+                    documentId: requestBody.payment.id,
                 },
                 populate: ['user', 'items'],
             });

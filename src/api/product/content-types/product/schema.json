@@ -40,6 +40,10 @@
       "type": "biginteger",
       "default": "0",
       "min": "0"
+    },
+    "custom": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

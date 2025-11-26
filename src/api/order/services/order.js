@@ -20,6 +20,7 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
         }
 
         const itemsIds = ctx.request.body.productIds;
+        const qty = ctx.request.body.qty;
 
         let grandTotal = 0;
         let orderItems = [];
@@ -34,12 +35,12 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
             const items = await strapi.documents('api::order-item.order-item').create({
                 data: {
                     name: product.name,
-                    price: product.price,
-                    amount: product.amount
+                    price: product.price * qty,
+                    amount: product.amount * qty
                 }
             });
 
-            grandTotal += product.price;
+            grandTotal += product.price * qty;
             orderItems.push(items.id);
         }
 

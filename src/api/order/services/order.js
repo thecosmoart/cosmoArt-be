@@ -98,7 +98,7 @@ module.exports = createCoreService('api::order.order', ({strapi}) => ({
             if (!order) {
                 return;
             }
-console.log('***', order);
+
             const user = order.user;
 
             await strapi.documents('api::order.order').update({
@@ -107,7 +107,7 @@ console.log('***', order);
                     order_status: 'COMPLETED',
                 }
             });
-console.log('***', Number(user.balance) + Number(order.items[0].amount));
+
             await strapi.documents('plugin::users-permissions.user').update({
                 documentId: user.documentId,
                 data: {
@@ -127,7 +127,7 @@ console.log('***', Number(user.balance) + Number(order.items[0].amount));
                     `<p>We\'re happy to let you know that your order #${order.id} has been received and is currently being processed.<br>We\'ll notify you as soon as it ships.</p>` +
                     '<p>If you have any questions in the meantime, feel free to reply to this email — we\'re here to help.</p>' +
                     '<p>Thanks again for choosing us!</p>' +
-                    '<p>Best regards,<br>The Site Team<br><a href="site.com">site.com</a><br><a href="mailto:support@site.com">support@site.com</a></p>'
+                    '<p>Best regards,<br>The Cosmo Art<br><a href="thecosmoart.com">thecosmoart.com</a><br><a href="mailto:support@thecosmoart.com">support@thecosmoart.com</a></p>'
             });
         }
     },

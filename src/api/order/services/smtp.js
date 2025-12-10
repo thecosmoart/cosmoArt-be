@@ -1,20 +1,24 @@
-const smtp = require('@sendgrid/mail');
+const { MailtrapClient } = require("mailtrap");
 
-smtp.setApiKey(process.env.SENDGRID_API_KEY);
+const client = new MailtrapClient({
+    token: process.env.MAILTRAP_API_TOKEN,
+});
 
 module.exports = () => ({
     sendEmail: async ({ to, sender, subject, body, replyTo }) => {
         try {
-            await smtp.send({
-                from: sender,
-                to: to,
-                subject: subject,
+            await client.send({
+                from: {
+                    email: sender,
+                    name: "The Cosmo Art Support"
+                },
+                to: [{ email: to }],
+                subject,
                 html: body,
-                replyTo: replyTo ?? sender
+                reply_to: replyTo,
             });
         } catch (error) {
             console.error('***', error);
-            console.error('***', error.response.body);
         }
     }
 })

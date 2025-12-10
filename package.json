@@ -15,11 +15,11 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@sendgrid/mail": "^8.1.5",
     "@strapi/plugin-cloud": "5.11.0",
     "@strapi/plugin-users-permissions": "5.11.0",
-    "@strapi/strapi": "5.11.0",
+    "@strapi/strapi": "^5.31.3",
     "dayjs": "^1.11.13",
+    "mailtrap": "^4.4.0",
     "mysql2": "3.9.8",
     "openai": "^6.7.0",
     "openpayze": "file:libs/openpayze-1.0.tgz",

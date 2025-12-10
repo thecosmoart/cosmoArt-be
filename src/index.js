@@ -45,7 +45,7 @@ module.exports = {
                             '<p>You will receive a Steam trade offer link within the next 7 business days.</p>' +
                             '<p>Please make sure your Steam account is ready to receive trades and that your trade URL is up to date.\n</p>' +
                             '<p>If you have any questions or need help, feel free to reach out — we’re here for you.\n</p>' +
-                            '<p>Best regards,<br>The Site Team<br><a href="site.com">skin-harbor.com</a><br><a href="mailto:support@skin-harbor.com">support@skin-harbor.com</a></p>'
+                            '<p>Best regards,<br>The Cosmo Art<br><a href="thecosmoart.com">skin-harbor.com</a><br><a href="mailto:support@skin-harbor.com">support@skin-harbor.com</a></p>'
                     });
                 }
 
@@ -59,7 +59,7 @@ module.exports = {
                             `<p>We wanted to inform you that unfortunately, item from your order #${ order.id } is currently unavailable.<br>We sincerely apologize for the inconvenience.</p>` +
                             '<p>A refund for the unavailable item will be processed shortly.<br>You should see the funds returned to your account within 3–5 business days, depending on your bank.</p>' +
                             '<p>If you have any questions or need assistance, don’t hesitate to reach out.\n</p>' +
-                            '<p>Best regards,<br>The Skin-Harbor Team<br><a href="skin-harbor.com">skin-harbor.com</a><br><a href="mailto:support@skin-harbor.com">support@skin-harbor.com</a></p>'
+                            '<p>Best regards,<br>The Cosmo Art<br><a href="skin-harbor.com">skin-harbor.com</a><br><a href="mailto:support@skin-harbor.com">support@skin-harbor.com</a></p>'
                     });
                 }
             },
